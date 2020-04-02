@@ -1,0 +1,6 @@
+[submodule "src/octomap_mapping"]
+	path = src/octomap_mapping
+	url = https://github.com/OctoMap/octomap_mapping.git
+[submodule "src/realsense-ros"]
+	path = src/realsense-ros
+	url = https://github.com/IntelRealSense/realsense-ros.git
