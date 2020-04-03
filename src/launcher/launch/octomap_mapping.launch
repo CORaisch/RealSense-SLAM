@@ -1,15 +1,14 @@
 <launch>
 	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
-		<param name="resolution" value="0.05" />
-		
+		<!-- map voxel size in meter -->
+		<param name="resolution" value="0.04" />
 		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
 		<param name="frame_id" type="string" value="t265_odom_frame" />
-		
 		<!-- maximum range to integrate (speedup!) -->
 		<param name="sensor_model/max_range" value="5.0" />
-		
+		<!-- if true data will be send latched (set to false for max performance) -->
+		<param name="latch" value="false" />
 		<!-- data source to integrate (PointCloud2) -->
 		<remap from="cloud_in" to="/d400/depth/color/points" />
-	
 	</node>
 </launch>
