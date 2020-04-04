@@ -1,7 +1,13 @@
 <launch>
+
+  <arg name="rviz"       default="true"/>
+  <arg name="rviz_cfg"   default="/home/claudio/Projects/Realsense-SLAM/rviz/octomap_setup.rviz"/>
+  <arg name="resolution" default="0.05"/>
+
+  <!-- launch octomap -->
 	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
 		<!-- map voxel size in meter -->
-		<param name="resolution" value="0.04" />
+		<param name="resolution" value="$(arg resolution)" />
 		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
 		<param name="frame_id" type="string" value="t265_odom_frame" />
 		<!-- maximum range to integrate (speedup!) -->
@@ -11,4 +17,7 @@
 		<!-- data source to integrate (PointCloud2) -->
 		<remap from="cloud_in" to="/d400/depth/color/points" />
 	</node>
+
+  <!-- launch rviz if requested -->
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_cfg)"/>
 </launch>
