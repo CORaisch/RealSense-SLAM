@@ -71,10 +71,15 @@ Launchfile allows to stream all necessarry data from t265 and d400 sensors. All 
 * run `roslaunch launcher rs_d400_and_t265_fixed_mount.launch enable_color:=true allow_no_texture_points:=false` to stream depth and pose data. The pointcloud only contains those points where color information is available and can be used for cleaner visualization in combination with `enable_color:=true`.
 
 ## octomap_mapping.launch
-TODO
+* run `roslaunch launcher octomap_mapping.launch` to start the octomap_server alongside rviz. Octomap_server will immediately start integrating the pointclouds into the octomap.
+* run `roslaunch launcher octomap_mapping.launch rviz:=false` to start without rviz visualization.
+* run `roslaunch launcher octomap_mapping.launch resolution:=0.03` to start the octomap_server with a map voxel size of 0.03 meters. The bigger the resolution the more performant octomap will run.
 
 ## rtabmap.launch
-TODO
+* run `roslaunch launcher rtabmap.launch` to start rtabmap alongside rviz. Rtabmap will immediately start integrating the pointclouds into the map. Rtabmap is only used for mapping, all Visual Odometry information will be taken from T265 only. Other than octomap, rtabmap will also optimize for the cameras trajectory during Bundle Adjustment. TODO ...where is topic from...
+* run `roslaunch launcher rtabmap.launch args:=-d` to start rtabmap as above, but it will delete the databese at on startup (also achieved by `args:=--delete_db_on_start`). Without this argument rtabmap will load the database from before.
+* run `roslaunch launcher rtabmap.launch rviz:=false` to start rtabmap without rviz visualization.
+* run `roslaunch launcher rtabmap.launch rviz:=false rtabmapviz:=true` to start rtabmap alongside rtabmapviz, instead of rviz. Rtabmapviz is the official visualization tool coming with the rtabmap install.
 
 # ROS Topics Overview
 TODO
