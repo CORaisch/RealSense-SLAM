@@ -1,4 +1,6 @@
 build/
 install/
 devel/
+data/*.ot
+data/*.bt
 .catkin_workspace
