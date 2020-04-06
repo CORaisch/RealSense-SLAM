@@ -87,6 +87,8 @@ Visualization Manager:
         All Enabled: false
         d400_aligned_depth_to_color_frame:
           Value: false
+        d400_aligned_depth_to_infra1_frame:
+          Value: false
         d400_color_frame:
           Value: false
         d400_color_optical_frame:
@@ -94,6 +96,14 @@ Visualization Manager:
         d400_depth_frame:
           Value: false
         d400_depth_optical_frame:
+          Value: false
+        d400_infra1_frame:
+          Value: false
+        d400_infra1_optical_frame:
+          Value: false
+        d400_infra2_frame:
+          Value: false
+        d400_infra2_optical_frame:
           Value: false
         d400_link:
           Value: true
@@ -127,10 +137,18 @@ Visualization Manager:
                   d400_aligned_depth_to_color_frame:
                     d400_color_optical_frame:
                       {}
+                  d400_aligned_depth_to_infra1_frame:
+                    d400_infra1_optical_frame:
+                      {}
                   d400_color_frame:
                     {}
                   d400_depth_frame:
                     d400_depth_optical_frame:
+                      {}
+                  d400_infra1_frame:
+                    {}
+                  d400_infra2_frame:
+                    d400_infra2_optical_frame:
                       {}
                 t265_accel_frame:
                   t265_accel_optical_frame:
@@ -270,6 +288,18 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Class: octomap_rviz_plugin/ColorOccupancyGrid
+      Enabled: false
+      Max. Height Display: inf
+      Max. Octree Depth: 16
+      Min. Height Display: -inf
+      Name: ColorOccupancyGrid
+      Octomap Topic: /rtabmap/octomap_binary
+      Queue Size: 5
+      Value: false
+      Voxel Alpha: 1
+      Voxel Coloring: Z-Axis
+      Voxel Rendering: Occupied Voxels
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -301,18 +331,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.543079137802124
-        Y: 0.06729577481746674
-        Z: 0
+        X: -0.1537158489227295
+        Y: 0.4358764886856079
+        Z: 5.960464477539062e-7
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3497968316078186
+      Pitch: 0.27479681372642517
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 3.0642170906066895
+      Yaw: 3.209218978881836
     Saved: ~
 Window Geometry:
   "&Displays":
