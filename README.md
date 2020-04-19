@@ -79,7 +79,7 @@ Launchfile will start a octomap_server for integrating the d400 pointclouds into
 * to save an octomap into a .ot (float format) or .bt (binary format) file run `rosrun octomap_server octomap_saver -f FILENAME.{ot|bt}`.
 
 ## rtabmap.launch
-Launchfile will start rtabmap for integrating the d400 pointclouds into an optimized map. Also incorporates the d400 color and IR stereo images (for IR images run `rs_d400_and_t265_fixed_mount.launch` with `enable_infra:=true`). Run this after `rs_d400_and_t265_fixed_mount.launch`.
+Launchfile will start rtabmap for integrating the d400 pointclouds into an optimized map. Also incorporates the d400 color image for visual optimizations. Run this after `rs_d400_and_t265_fixed_mount.launch`.
 * run `roslaunch launcher rtabmap.launch` to start rtabmap alongside rviz. Rtabmap will immediately start integrating the pointclouds into the map. Rtabmap is only used for mapping, all Visual Odometry information will be taken from T265 only. Other than octomap, rtabmap will also optimize for the camera trajectory during Bundle Adjustment. For the corrected odometry rtabmap will republish a tf transform from `/map` to `/t265_odom_frame`, i.e. the odometry published at topic `/t265/odom/sample` will be automatically corrected since its defined in the same tf frame.
 * run `roslaunch launcher rtabmap.launch args:=-d` to start rtabmap as above, but it will delete the databese at on startup (also achieved by `args:=--delete_db_on_start`). Without this argument rtabmap will load the database from before.
 * run `roslaunch launcher rtabmap.launch rviz:=false` to start rtabmap without rviz visualization.
