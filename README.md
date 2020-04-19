@@ -48,7 +48,6 @@ catkin_make install
 sudo apt-get update
 sudo apt-get install ros-melodic-octomap-server ros-melodic-octomap-rviz-plugins
 ```
-Cloning [octomap-mapping](https://github.com/OctoMap/octomap_mapping) into `catkin_ws/src` should not be neccessary, the sub-git will be removed when tested!
 ### Install RTAB-Map
 ```bash
 sudo apt-get update
