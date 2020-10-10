@@ -87,8 +87,8 @@ Launchfile will start rtabmap for integrating the d400 pointclouds into an optim
 
 # ROS Topics Overview
 ## rs_d400_and_t265_fixed_mount.launch Topics
-TODO
+TODO add documentation
 ## octomap_mapping.launch Topics
-TODO
+TODO add documentation
 ## rtabmap.launch Topics
-TODO
+TODO add documentation
