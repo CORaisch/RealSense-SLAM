@@ -27,13 +27,13 @@ Clone the official git from [here](https://github.com/IntelRealSense/realsense-r
 ```bash
 cd PROJECT_BASE_DIR/src
 git clone https://github.com/IntelRealSense/realsense-ros.git
-cd realsense-ros/
-git checkout `git tag | sort -V | grep -P "^\d+\.\d+\.\d+" | tail -1`
+catkin_init_workspace
 ```
-The ROS package [dynamic-reconfigure](https://wiki.ros.org/dynamic_reconfigure) is required for building. It's a helpful tool that allows you to reconfigure parameters of a ROS node at runtime. Install it with:
+Also additional ROS packages are required. Install them with:
 ```bash
 sudo apt-get update
-sudo apt-get install ros-melodic-dynamic-reconfigure
+sudo apt-get install ros-noetic-ddynamic-reconfigure ros-noetic-cv-bridge ros-noetic-image-transport ros-noetic-tf ros-noetic-diagnostic-updater
+sudo apt-get install libeigen3-dev
 ```
 Then build your catkin workspace:
 ```bash
@@ -45,19 +45,19 @@ catkin_make install
 ### Install Octomap
 ```bash
 sudo apt-get update
-sudo apt-get install ros-melodic-octomap-server ros-melodic-octomap-rviz-plugins
+sudo apt-get install ros-noetic-octomap-server ros-noetic-octomap-rviz-plugins
 ```
 ### Install RTAB-Map
 ```bash
 sudo apt-get update
-sudo apt-get install ros-melodic-rtabmap-ros
+sudo apt-get install ros-noetic-rtabmap-ros
 ```
 ## Optional
 [Octovis](https://wiki.ros.org/octovis) is a nice tool to visualize octomaps and octrees. Another simple but helpful tool to quickly visualize raw images directly from a rostopic is [image-view](https://wiki.ros.org/image_view).
 ```bash
 sudo apt-get update
-sudo apt-get instsall ros-melodic-octovis
-sudo apt-get instsall ros-melodic-image-view
+sudo apt-get instsall ros-noetic-octovis
+sudo apt-get instsall ros-noetic-image-view
 ```
 
 # Usage
