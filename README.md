@@ -17,7 +17,6 @@ Clone this repo to desired `PROJECT_BASE_DIR` and initialize the catkin workspac
 mkdir PROJECT_BASE_DIR
 git clone https://github.com/CORaisch/Realsense-SLAM.git PROJECT_BASE_DIR
 cd PROJECT_BASE_DIR
-catkin_init_workspace
 ```
 For handy usage add this to your shells rc file:
 ```bash
