@@ -35,7 +35,12 @@ sudo apt-get update
 sudo apt-get install ros-noetic-ddynamic-reconfigure ros-noetic-cv-bridge ros-noetic-image-transport ros-noetic-tf ros-noetic-diagnostic-updater
 sudo apt-get install libeigen3-dev
 ```
-Then build your catkin workspace:
+### 3) Install octomap-server-rviz-plugins
+```bash
+cd PROJECT_BASE_DIR/src
+git clone https://github.com/OctoMap/octomap_rviz_plugins.git
+```
+### 4) Finally build your catkin workspace:
 ```bash
 cd PROJECT_BASE_DIR
 catkin_make clean
@@ -45,7 +50,7 @@ catkin_make install
 ### Install Octomap
 ```bash
 sudo apt-get update
-sudo apt-get install ros-noetic-octomap-server ros-noetic-octomap-rviz-plugins
+sudo apt-get install ros-noetic-octomap-server
 ```
 ### Install RTAB-Map
 ```bash
