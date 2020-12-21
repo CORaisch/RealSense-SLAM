@@ -11,6 +11,8 @@
   <arg name="tf_prefix_camera2"            default="$(arg camera2)"/>
   <arg name="initial_reset"                default="false"/>
   <arg name="enable_fisheye"               default="false"/>
+  <arg name="enable_gyro"                  default="true"/>
+  <arg name="enable_accel"                 default="true"/>
   <arg name="enable_color"                 default="false"/>
   <arg name="enable_infra"                 default="false"/>
   <arg name="color_width"                  default="640"/>
@@ -36,6 +38,9 @@
       <arg name="initial_reset"         value="$(arg initial_reset)"/>
       <arg name="enable_fisheye1"       value="$(arg enable_fisheye)"/>
       <arg name="enable_fisheye2"       value="$(arg enable_fisheye)"/>
+      <arg name="enable_gyro"           value="$(arg enable_gyro)"/>
+      <arg name="enable_accel"          value="$(arg enable_accel)"/>
+      <arg name="enable_pose"           value="true"/>
       <arg name="topic_odom_in"         value="$(arg topic_odom_in)"/>
       <arg name="calib_odom_file"       value="$(arg calib_odom_file)"/>
       <arg name="fisheye_fps"           value="$(arg fisheye_fps)"/>

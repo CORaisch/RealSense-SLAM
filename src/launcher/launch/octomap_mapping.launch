@@ -1,7 +1,7 @@
 <launch>
 
   <arg name="rviz"       default="true"/>
-  <arg name="rviz_cfg"   default="/home/claudio/Projects/Realsense-SLAM/rviz/octomap_setup.rviz"/>
+  <arg name="rviz_cfg"   default="/home/claudio/Projects/RealSense-SLAM/rviz/octomap_setup.rviz"/>
   <arg name="resolution" default="0.05"/>
 
 

@@ -1,3 +1,6 @@
 [submodule "src/realsense-ros"]
 	path = src/realsense-ros
 	url = https://github.com/IntelRealSense/realsense-ros.git
+[submodule "src/octomap_rviz_plugins"]
+	path = src/octomap_rviz_plugins
+	url = https://github.com/OctoMap/octomap_rviz_plugins.git
